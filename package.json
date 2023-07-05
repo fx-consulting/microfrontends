@@ -1,0 +1,46 @@
+{
+  "name": "@fx-consulting/microfrontends",
+  "version": "1.0.1",
+  "description": "Easy to use, zero-dependency, fast and optimized microfrontend architecture for React, Vanilla JS and Anuglar apps.",
+  "main": "dist/index.js",
+  "types": "types.d.ts",
+  "files": [
+    "dist",
+    "types.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ./src/**/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fx-consulting/microfrontends.git"
+  },
+  "keywords": [
+    "microfrontend",
+    "react",
+    "shared",
+    "dependencies",
+    "module",
+    "federation"
+  ],
+  "author": "Michael Jach",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/fx-consulting/microfrontends/issues"
+  },
+  "homepage": "https://github.com/fx-consulting/microfrontends#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "typescript": "^5.1.3"
+  },
+  "peerDependencies": {
+    "webpack": "^5.7.0"
+  },
+  "dependencies": {
+    "@module-federation/utilities": "^1.9.0"
+  }
+}
