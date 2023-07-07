@@ -1,6 +1,6 @@
 {
   "name": "@fx-consulting/microfrontends",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Easy to use, zero-dependency, fast and optimized microfrontend architecture for React, Vanilla JS and Anuglar apps.",
   "main": "dist/index.js",
   "types": "types.d.ts",

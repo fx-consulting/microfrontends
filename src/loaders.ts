@@ -19,10 +19,8 @@ export const runtimeLoader = (
       }
       resolve(proxy)
     } else {
-      const url = config.MICROFRONTENDS.REMOTES.find(r => r.NAME === '${
-        remote.name
-      }').URL
-      const remoteUrl = url + 'remoteEntry.js'
+      const url = config.remotes.find(r => r.name === '${remote.name}').url
+      const remoteUrl = url + '/remoteEntry.js'
       const script = document.createElement('script')
       script.src = remoteUrl;
       script.onerror = () => {

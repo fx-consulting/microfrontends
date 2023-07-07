@@ -5,14 +5,16 @@ export async function initializer() {
     window.__mf = { configs: {}, configUrls: {} };
   }
 
-  const configHost = await fetch('config.json');
+  const configHost = await fetch('microfrontend.json');
   const configJSON = await configHost.json();
-  window.__mf.configs[configJSON.microfrontends.name] = configJSON;
+  window.__mf.configs[configJSON.name] = configJSON;
 
-  const promises = configJSON.microfrontends.remotes.map(
+  const promises = configJSON.remotes.map(
     async ({ name, url }: { name: string; url: string }) => {
       try {
-        const config = await fetch(`${url}/config.json`).then((r) => r.json());
+        const config = await fetch(
+          `${url.replace('static/chunks', '')}microfrontend.json`
+        ).then((r) => r.json());
 
         window.__mf.configs[name] = config;
         return {
